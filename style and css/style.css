@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=B612&family=Heebo&family=Montserrat:wght@100&family=Poppins:wght@100&family=Raleway:wght@100;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+html{
+    background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
+    width: 100vw;
+}
+body{
+    margin: 0;
+    width: 100%;
+    padding: 0;    
+    background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
+}
+
+.intro{
+    z-index: 10000;
+    background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%; 
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+}
+.intro-text{
+    color:rgb(7, 10, 24);
+    font-family:'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+}
+.intro-text h1{
+    animation: fade-in 1s ease-in;
+}
+.slider{
+    z-index: 10000;
+    background: rgba(255,83,0,1);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%; 
+    transform: translateY(110vh);
+}
+.hide{
+    background: transparent;
+    overflow: hidden;
+}
+.hide span{
+    transform: translateY(110vh);
+    display: inline-block;
+}
+.logo-box{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(8, 4, 0);
+    border-radius: 500px;
+}
+.logo-box svg{
+    padding-top: 25px;
+    transform-origin: top;
+  }
+.logo-box svg path {
+    animation: dash 1s ease-out forwards, pulse 1s 1s ease-out forwards;
+    fill:transparent ;
+    pulse: 1s 1s ease-out forwards;
+    stroke: #fff;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    stroke-opacity: 1;
+    stroke-width: 14;
+  }
+.logo-box svg .dumbell-inner{
+   fill: transparent;
+    stroke: 10;
+    stroke: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
+    animation: filling 4s linear infinite;
+    stroke-dasharray:1500;
+    stroke-dashoffset:1500;
+  }
+
+  @keyframes filling{
+      from{
+          stroke-dasharray:0;
+          stroke-dashoffset:0;
+            }
+      to{
+        stroke-dasharray:5000;
+        stroke-dashoffset:0;
+          }
+  }
+  @keyframes fade-in{
+      from{
+          opacity: 0;
+      }
+      to{
+          opacity:1;
+        }
+  }
+@media(max-width:750px){
+    .intro-text{
+        font-size:2rem;
+        padding:30px;
+    }
+}
+.wrapper{
+    z-index: 10;
+    overflow: hidden;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+header{
+    background-color: #161616;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    height: auto;
+    top:0; 
+    z-index: 10;
+    position:fixed;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+.scrolled{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+header i{
+    background:-webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    font-size: 2.5rem;
+}
+.svg-container{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+.wrapper .slide-controls{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    justify-content: space-between;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    background-color: #161616;
+  }
+  .slide-controls .slide{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+  }
+  .slide-controls label.calendar{
+    color: #000;
+  }
+  .slide-controls .slider-tab{
+    position: absolute;
+    height: 100%;
+    width: 16.666667%;
+    left: 41.666666666%;
+    z-index: 0;
+    border-radius: 700000px;
+    background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  input[type="radio"]{
+    display: none;
+  }
+  #calendar:checked ~ .slider-tab{
+    left: 75%;
+  }
+  #workout:checked ~ .workout-page{
+    left: 0%;
+  }
+  #workout:checked ~ .slider-tab{
+    left: 8.333333333%;
+  }
+  #calendar:checked ~ label.calendar{
+    color: #fff;
+    cursor: default;
+    user-select: none;
+  }
+  #calendar:checked ~ label.home{
+    background: -webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #calendar:checked ~ label.workout{
+    background: -webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #workout:checked ~ label.home{
+    background: -webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #workout:checked ~ label.calendar{
+    background: -webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #home:checked ~ label.calendar{
+    background: -webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #home:checked ~ label.workout{
+    background: -webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #home:checked ~ label.home{
+    cursor: default;
+    user-select: none;
+  }
+
+  .home-page{
+      max-width: 90vw;
+      margin-bottom: 18vh;
+      height: 100%;
+      position: relative;
+      margin: 8vh auto;
+      background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
+}
+.home-page video{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .home-page .motiv-quote{
+      text-align: center;
+      font-size: 1rem;
+      font-family: 'Lato', sans-serif;
+      color: #161616;
+      padding-bottom: 10px;
+      font-weight: 400;
+      text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .home-page .motiv-quote span{
+    font-weight: 600;
+}
+.home-page .next-workout-container{
+        display:flex;
+        height: 20vh;
+        border-radius: 20px;
+        margin-top: 30px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+    }
+    .strength{
+        background: linear-gradient(146deg, #161616 0%, #2e2e2e 45%, #707070 75%,#dbdbdb 100%);
+    }
+    .cardio{
+        background: linear-gradient(46deg, #dbdbdb 0%, #707070 45%, #2e2e2e 75%,#161616 100%);
+    }
+    .home-page .next-workout-container h2{
+        font-size: 1.25rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        margin: 3vh 2vh;
+        background:-webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+        text-shadow: rgba(255,83,0,.3) 0px 5px 15px;
+    }
+    .home-page .left-half:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home-page .left-half:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        text-align:right;
+        width: 50vw;
+    }
+    .home-page .left-half:nth-child(2) button{
+        margin-left: 10vw;
+        width: 20vw;
+    }
+   
+   
+    .home-page .left-half button{
+        padding: .5vh;
+        border-radius: 30px;
+        background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
+        border: none;
+        box-shadow: rgba(255,83,0,.3) 0px 5px 15px;
+        outline: none;
+        font-family: 'Raleway', sans-serif;
+        font-size: .75rem;
+        font-weight: 700;
+    }
+    .premium .left-half button{
+        display: flex;
+        padding: 1vh .5vh;
+        border-radius: 30px;
+        margin-top: 10vh;
+        font-size: 1rem;
+    }
+    
+    .home-page .strength img{
+        height:14vh;
+        width: auto;
+        margin: 3vh 0;
+    }
+    .home-page .cardio img{
+        height:20vh;
+        width: auto;
+    }
+    .home-page .nutrition{
+        display:flex;
+        height: 20vh;
+        border-radius: 20px;
+        margin-top: 3vh;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+        background: linear-gradient(146deg, #161616 0%, #2e2e2e 45%, #707070 75%,#dbdbdb 100%);  
+    }
+    .home-page .progress-tracking{
+        display:flex;
+        height: 20vh;
+        border-radius: 20px;
+        margin-top: 3vh;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+        background: linear-gradient(46deg, #dbdbdb 0%, #707070 45%, #2e2e2e 75%,#161616 100%);
+    }
+    .home-page .progress-tracking h2{
+        font-size: 1.25rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        margin: 3vh 2vh;
+        background:-webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+        text-shadow: rgba(255,83,0,.3) 0px 5px 15px;
+    }
+    .home-page .nutrition h2{
+        font-size: 1.25rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        margin: 3vh 2vh;
+        background:-webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+        text-shadow: rgba(255,83,0,.3) 0px 5px 15px;
+    }
+    canvas{
+        width: 60vw;
+        height: 20vh;
+        max-width: 60vw;
+    }
+    .nutrition img{
+        height:16vh;
+        width: auto;
+        margin-top: 2vh;
+        margin-left: 15vw;
+    }
+    .nutrition .right-half{
+        width:30vw;
+    }
+    .premium{
+        display:flex;
+        height: 20vh;
+        border-radius: 20px;
+        margin-top: 3vh;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+        background: linear-gradient(140deg, #161616 0%, #2e2e2e 45%, #707070 75%,#dbdbdb 100%);
+    }
+    .premium h2{
+            font-size: 1.25rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            margin: 3vh 2vh;
+            background:-webkit-linear-gradient(rgba(255,83,0,1),  rgba(237,161,0,1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;  
+            text-shadow: rgba(255,83,0,.3) 0px 5px 15px;
+        }
+.workout-page{
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    width: 100vw;         
+    left: 0;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
