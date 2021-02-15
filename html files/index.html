@@ -327,12 +327,12 @@ Workout</div>
             <h2>Your <br /> profile:</h2>       
          </div>
         <div class="left-half">
-            <img src="../media/user.jpg" alt="profile-pic"/>
+            <img src="../media/user.jpg" alt=""/>
         </div>
     </div>
     <div class="next-workout-container home">
         <!--This will eventually be a live training session-->
-        <video src="../media/workout.mp4" type="video/mpeg" autoplay muted loop></video>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NoBAfjvhj7o?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
     </div>
 </div>
 <div class="workout card">
@@ -383,14 +383,14 @@ Workout</div>
       const loginText = document.querySelector(".title-text .login");
       const calendarText = document.querySelector(".title-text .calendar");
       const loginForm = document.querySelector("div.workout");
-      const homePage = document.querySelector("div.home")
+      const homePage = document.querySelector("div.home-page")
       const calendarPage = document.querySelector("div.calendar-page");
       const loginBtn = document.querySelector("label.login");
       const calendarBtn = document.querySelector("label.calendar");
       const signupBtn = document.querySelector("label.signup");
       
       signupBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "90vw";
+        loginForm.style.marginLeft = "80vw";
         loginText.style.marginLeft = "-100vw";
         calendarPage.style.marginLeft="-160vw";
         homePage.style.marginLeft="-80vw";
@@ -399,13 +399,13 @@ Workout</div>
         loginForm.style.marginLeft = "10vw";
         loginText.style.marginLeft = "0vw";
         calendarPage.style.marginLeft="-80vw";
-        homePage.style.marginLeft="10vw";
+        homePage.style.marginLeft="0vw";
       });
       calendarBtn.onclick = (()=>{
         loginForm.style.marginLeft = "20vw";
         calendarPage.style.marginLeft="10vw"
         loginText.style.marginLeft = "-200vw";
-           homePage.style.marginLeft="10vw";
+           homePage.style.marginLeft="0vw";
       });
     </script>
 <script 
