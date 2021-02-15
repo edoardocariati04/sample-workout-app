@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LightNing Fit</title>
     <link rel="icon" type="image/x-icon" href="https://www.pinclipart.com/picdir/big/70-700269_28-collection-of-dumbbell-clipart-transparent-dumbbells-icon.png" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../style and css/style.css"/>
     <link rel="stylesheet" href="../style and css/styles.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -115,22 +114,22 @@
 
 </div>
 </div>
-        <div class="workout-page">
-            
-        
-        </div>
-
-        <div class="home-page">
+       
+<main>
+    <div class="workout-page card">
+      
+    </div>
+        <div class="home-page card">-->
             <!--An Idea could be to make quotes that change everydat (add a database of 100 and then loop)-->
-            <h1 class="motiv-quote"><em>don't strive to be better than others; <span>strive to be better than your best self.</span></em></h1>  
+          <!--  <h1 class="motiv-quote"><em>don't strive to be better than others; <span>strive to be better than your best self.</span></em></h1>  -->
         <!--This would eventually be a live video of a training session or if not live, it would play the recording of the last training session-->
-            <video src="../media/workout.mp4" type="video/mpeg" muted autoplay loop></video>
+          <!--  <video src="../media/workout.mp4" type="video/mpeg" muted autoplay loop></video>-->
             
             <!--Personalized workouts and options. A lot of logic would need to go inside it to make it more personalized-->
             
-            <div class="next-workout-container strength">
+         <!---  <div class="next-workout-container strength">
                 <div class="left-half">
-                    <h2>next <br />strength workout:</h2>
+                    <h2>next <br />strength<br /> workout:</h2>
                     <button>Start now!</button>
                 </div>
                 <div class="right-half">
@@ -175,6 +174,22 @@
             </div>
         </div>
         
+
+        <div class="calendar-page card">
+            <div class="next-workout-container cardio">
+                <div class="right-half">
+                    <img src="../media/cardio.png" alt=""/>
+                </div>
+                <div class="left-half">
+                    <h2>next <br/> cardio <br/> workout:</h2>
+                    <button>Start now!</button>
+                </div>
+            </div>
+                
+            
+        </div>
+    </main>
+
 <script 
     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" 
     integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" 
@@ -184,4 +199,81 @@
 
 </body>
 </html>
+-->
 
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New fitness app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../style and css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">
+Login Form</div>
+<div class="title signup">
+Signup Form</div>
+</div>
+
+<div class="form-container">
+       
+<div class="form-inner">
+  <div class="home-page card">
+    <div class="next-workout-container cardio">
+        <div class="right-half">
+            <img src="./cardio copy.png" alt=""/>
+        </div>
+        <div class="left-half">
+            <h2>next <br/> cardio <br/> workout:</h2>
+            <button>Start now!</button>
+        </div>
+    </div>
+   
+</div>
+<div class="workout card">
+  <div class="next-workout-container cardio">
+      <div class="right-half">
+      </div>
+      <div class="left-half">
+          <h2>next <br/> cardio <br/> workout:</h2>
+          <button>Start now!</button>
+      </div>
+  </div>
+ 
+
+</div>
+</div>
+</div>
+</div>
+<div class="slide-controls">
+  <input type="radio" name="slide" id="dumbbell">
+  <input type="radio" name="slide" id="login" checked>
+  <input type="radio" name="slide" id="signup">
+  <label for="login" class="slide login"><i class="fas fa-dumbbell"></i> </label>
+  <label for="login" class="slide login"><i class="fas fa-home"></i> </label>
+  <label for="signup" class="slide signup"><i class="fas fa-calendar-times"></i> </label>
+  <div class="slider-tab">
+</div>
+</div>
+<script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("div.workout");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      signupBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "-80vw";
+        loginText.style.marginLeft = "-80vw";
+      });
+      loginBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "20vw";
+        loginText.style.marginLeft = "0vw";
+      });
+    </script>
+
+  </body>
+</html>
