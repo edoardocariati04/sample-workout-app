@@ -301,17 +301,21 @@ Workout</div>
       <div class="calendar-page card">
           <div class="next-workout-container track-page">
               <div class="left-half">
-                  <h2>Track <br/> your <br/> results:</h2>
+                  <h2>Track your results:</h2>
               </div>
               <div class="right-half">
-                  <span>0000</span>
-                <button>Start now!</button>
+                  <h3>This week:</h3>
+                  <div class="results">
+                  <div class="element"> <span id="#trainings">0</span><h5>sessions<br/><br/></h5></div> 
+                  <div class="element"> <span id="#minutes-trained">0</span><h5>min of training<br/><br/></h5></div>
+                    <div class="element"> <span id="#current-weight">0</span><h5>kg<br/><br/></h5> </div>
+                  </div>
              </div>
           </div> 
           <div class="next-workout-container track-page">
             <div class="calendar-wrapper">
-                <button id="btnPrev" type="button">Prev</button>
-                    <button id="btnNext" type="button">Next</button>
+                <button id="btnPrev" type="button"> <i class="fas fa-arrow-left"></i>Prev</button>
+                    <button id="btnNext" type="button">Next<i class="fas fa-arrow-right"></i></button>
                 <div id="divCal"></div>
               </div>
           </div>
@@ -320,32 +324,45 @@ Workout</div>
   <div class="home-page card">
     <div class="next-workout-container home">
         <div class="right-half">
-            <img src="./cardio copy.png" alt=""/>
-        </div>
+            <h2>Your <br /> profile:</h2>       
+         </div>
         <div class="left-half">
-            <h2>next <br/> cardio <br/> workout:</h2>
-            <button>Start now!</button>
+            <img src="../media/user.jpg" alt="profile-pic"/>
         </div>
     </div>
-   
+    <div class="next-workout-container home">
+        <!--This will eventually be a live training session-->
+        <video src="../media/workout.mp4" type="video/mpeg" autoplay muted loop></video>
+    </div>
 </div>
 <div class="workout card">
   <div class="next-workout-container cardio">
+      <div class="upper-box">
       <div class="right-half">
+          <img src="../media/climber-1.png" alt=""/>
       </div>
       <div class="left-half">
-          <h2>next <br/> cardio <br/> workout:</h2>
-          <button>Start now!</button>
+          <h2>Shatter <br/> those <br/> barriers!</h2>
+      </div>
+    </div>
+      <div class="button-sec">
+        <button>Start a new strength training!</button>
       </div>
   </div> 
-  <div class="next-workout-container cardio">
-      <div class="right-half">
-      </div>
-      <div class="left-half">
-          <h2>next <br/> cardio <br/> workout:</h2>
-          <button>Start now!</button>
-      </div>
+  <div class="next-workout-container cardio second">
+    <div class="upper-box">
+   
+    <div class="left-half">
+        <h2>Push <br/> it <br/>to <br/>the <br/> limit!</h2>
+    </div>
+    <div class="right-half">
+        <img src="../media/Image 1.png" alt=""/>
+    </div>
   </div>
+    <div class="button-sec">
+      <button>Start a new cardio training!</button>
+    </div>
+</div> 
  
 
 </div>
