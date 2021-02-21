@@ -112,7 +112,8 @@ html,body{
   background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
 }
 .wrapper{
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
   background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
@@ -231,7 +232,7 @@ input[type="radio"]{
   overflow: hidden;
   background-image: url("../media/cardio.png");
   background-position: top right;
-  overflow-y: scroll;
+  overflow-y:scroll;
 }
 .form-container .form-inner{
   display: flex;

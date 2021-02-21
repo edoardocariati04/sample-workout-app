@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(146deg, rgba(237,161,0,1) 0%, rgba(255,156,25,1) 35%, rgba(255,83,0,1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-size:cover;
+}
+.card{
+    display:flex;
+    border-radius: 20px;
+    margin: 15vh 5vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+    width: 90vw;
+    height: 70vh;
+    background: linear-gradient(146deg, #080808 0%, #161616 45%, #2e2e2e 85%,#616161 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card .upper-section{
+      display: flex;
+      justify-content: center;
+  }
+  .card i{
+      font-size: 4rem;
+      margin: 2vh auto;
+      color:#dbdbdb;
+      background:-webkit-linear-gradient(#dbdbdb,  rgba(237,161,0,1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;  
+      text-shadow: rgba(255,83,0,.3) 0px 5px 15px;
+  }
+
+  .g-signin2{
+      width: 60vw;
+      background: white;
+  }
